@@ -6,7 +6,7 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone <URL_репозитория>
+   https://github.com/ukarpenkov/simpleFormClient
    ```
 2. Перейдите в папку проекта:
    ```bash
