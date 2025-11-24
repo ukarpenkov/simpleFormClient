@@ -97,7 +97,13 @@ export const WorkplaceList = () => {
         accessorKey: "name",
         header: "Название",
         cell: ({ row }) => (
-          <Link to={`/workplace/${row.original.id}`}>{row.original.name}</Link>
+          <Link
+            to={`/workplace/${row.original.id}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {row.original.name}
+          </Link>
         ),
       },
       {
@@ -115,7 +121,7 @@ export const WorkplaceList = () => {
         cell: ({ row }) => (row.original.hasComputer ? row.original.ip : "—"),
       },
     ],
-    [selected, paginatedData]
+    [selected]
   );
 
   const table = useReactTable({
@@ -174,7 +180,6 @@ export const WorkplaceList = () => {
         />
       </Box>
 
-      {/* ---- TABLE ---- */}
       <TableContainer component={Paper}>
         <Table>
           <TableHead>
